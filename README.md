@@ -1,4 +1,5 @@
 # githubuserslookup
+<p>Serwer uses github API without token authorization which is limited to 60 requests per hour</p>
 <p>Usage</p>
 <p>on default serwer runs on localhost:8080</p>
 <p>supports:</p>
