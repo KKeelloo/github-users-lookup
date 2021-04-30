@@ -24,6 +24,8 @@ public class AppController {
     public EntityModel<StarsCountResponseHolder> starsCount(@PathVariable String user) throws Exception{
         logger.info("Fetch results for "+user);
         StarsCountResponseHolder response = new ReposGetter(user).calcStarsCount();
+        if(response == null)
+            throw new Exception("User not found");
         return EntityModel.of(response,
                 linkTo(methodOn(AppController.class).starsCount(user)).withSelfRel());
     }
@@ -33,6 +35,8 @@ public class AppController {
         logger.info("Fetch results for "+user);
         ReposGetter response = new ReposGetter(user);
         response.searchForRepos();
+        if(response.getRepos() == null)
+            throw new Exception("User not found");
         return EntityModel.of(response,
                 linkTo(methodOn(AppController.class).repos(user)).withSelfRel());
     }
