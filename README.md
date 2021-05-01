@@ -1,9 +1,21 @@
 # githubuserslookup
-<p>Serwer uses github API without token authorization which is limited to 60 requests per hour</p>
-<p>Usage</p>
-<p>on default serwer runs on localhost:8080</p>
-<p>supports:</p>
-<p>GET /repos/{user_name} - gets list of repositories and number of stars </p>
-<p>GET /starscount/{user_name} - gets number of stars </p>
-<p>to run on Ubuntu 20.04 open root project folder in terminal and type 'mvn spring-boot:run', doing this in Windows 10 cmd/powershell should also work (if there is mvn in the PATH)</p>
-<p> may add custom 404 page later</p>
+
+Serwer uses github API without token authorization which is limited to 60 requests per hour
+
+## Technologies
+ * Spring Boot 2.4.5
+ * Java 11
+ * Maven
+
+## Usage
+on default server runs on localhost:8080
+
+### Endpoints:
+ * GET /repos/{user_name} - gets list of repositories and number of stars 
+ * GET /starscount/{user_name} - gets number of stars
+### How to run
+
+To run on Ubuntu 20.04 open root project folder in terminal and type 'mvn spring-boot:run', doing this in Windows 10 cmd/powershell should also work (if there is mvn in the PATH).
+
+## TODO
+may add custom 404 page
