@@ -1,6 +1,6 @@
 # githubuserslookup
 
-Simple API getting info about gituhub user (star count & list of repos)
+Simple API getting info about github user (star count & list of repos)
 
 ## Important info
 Serwer uses github API without token authorization which is limited to 60 requests per hour
